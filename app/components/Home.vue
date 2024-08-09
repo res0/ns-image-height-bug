@@ -1,41 +1,22 @@
 <template>
     <Page>
         <ActionBar>
-            <Label text="Home"/>
+            <Label text="NS Android Image height bug"/>
         </ActionBar>
-
         <GridLayout>
-            <Label class="info">
-                <FormattedString>
-                    <Span class="fas" text.decode="&#xf135; "/>
-                    <Span :text="message"/>
-                </FormattedString>
-            </Label>
+            <StackLayout style="padding: 15 0;">
+                <Image
+                    src="~/images/test.jpg"
+                    style="border-width: 10;border-color:red;width:80%;height:auto;"
+                />
+            </StackLayout>
         </GridLayout>
     </Page>
 </template>
 
 <script>
-  export default {
-    computed: {
-      message() {
-        return "Blank {N}-Vue app";
-      }
-    }
-  };
+  export default {};
 </script>
 
 <style scoped lang="scss">
-    @import '@nativescript/theme/scss/variables/blue';
-
-    // Custom styles
-    .fas {
-        @include colorize($color: accent);
-    }
-
-    .info {
-        font-size: 20;
-        horizontal-align: center;
-        vertical-align: center;
-    }
 </style>
